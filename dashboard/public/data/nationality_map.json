@@ -1,0 +1,258 @@
+[
+  {
+    "eircode_district": "A63",
+    "county": "Wicklow",
+    "nationality": "Unknown",
+    "tx_count": 4,
+    "total_spend": 2135000.0,
+    "median_price": 520000.0
+  },
+  {
+    "eircode_district": "A67",
+    "county": "Wicklow",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 720100.0,
+    "median_price": 720100.0
+  },
+  {
+    "eircode_district": "A91",
+    "county": "Louth",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 590000.0,
+    "median_price": 590000.0
+  },
+  {
+    "eircode_district": "A92",
+    "county": "Meath",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 515000.0,
+    "median_price": 515000.0
+  },
+  {
+    "eircode_district": "A96",
+    "county": "Dublin",
+    "nationality": "Unknown",
+    "tx_count": 20,
+    "total_spend": 20115500.0,
+    "median_price": 982500.0
+  },
+  {
+    "eircode_district": "A98",
+    "county": "Wicklow",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 530000.0,
+    "median_price": 530000.0
+  },
+  {
+    "eircode_district": "D06",
+    "county": "Dublin",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 505000.0,
+    "median_price": 505000.0
+  },
+  {
+    "eircode_district": "D11",
+    "county": "Dublin",
+    "nationality": "Unknown",
+    "tx_count": 10,
+    "total_spend": 5595000.0,
+    "median_price": 552500.0
+  },
+  {
+    "eircode_district": "D13",
+    "county": "Dublin",
+    "nationality": "Unknown",
+    "tx_count": 2,
+    "total_spend": 1560000.0,
+    "median_price": 780000.0
+  },
+  {
+    "eircode_district": "D14",
+    "county": "Dublin",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 958333.0,
+    "median_price": 958333.0
+  },
+  {
+    "eircode_district": "D18",
+    "county": "Dublin",
+    "nationality": "Unknown",
+    "tx_count": 8,
+    "total_spend": 7212000.0,
+    "median_price": 882500.0
+  },
+  {
+    "eircode_district": "D20",
+    "county": "Dublin",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 1000000.0,
+    "median_price": 1000000.0
+  },
+  {
+    "eircode_district": "D22",
+    "county": "Dublin",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 785000.0,
+    "median_price": 785000.0
+  },
+  {
+    "eircode_district": "D6W",
+    "county": "Dublin",
+    "nationality": "Unknown",
+    "tx_count": 3,
+    "total_spend": 1527000.0,
+    "median_price": 512000.0
+  },
+  {
+    "eircode_district": "F28",
+    "county": "Mayo",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 775000.0,
+    "median_price": 775000.0
+  },
+  {
+    "eircode_district": "H91",
+    "county": "Galway",
+    "nationality": "Unknown",
+    "tx_count": 4,
+    "total_spend": 2605000.0,
+    "median_price": 617500.0
+  },
+  {
+    "eircode_district": "K36",
+    "county": "Dublin",
+    "nationality": "Unknown",
+    "tx_count": 2,
+    "total_spend": 1725000.0,
+    "median_price": 862500.0
+  },
+  {
+    "eircode_district": "K78",
+    "county": "Dublin",
+    "nationality": "Unknown",
+    "tx_count": 6,
+    "total_spend": 3605000.0,
+    "median_price": 570000.0
+  },
+  {
+    "eircode_district": "N91",
+    "county": "Westmeath",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 560000.0,
+    "median_price": 560000.0
+  },
+  {
+    "eircode_district": "NAN",
+    "county": "Cork",
+    "nationality": "Unknown",
+    "tx_count": 4,
+    "total_spend": 2530000.0,
+    "median_price": 552500.0
+  },
+  {
+    "eircode_district": "NAN",
+    "county": "Dublin",
+    "nationality": "Unknown",
+    "tx_count": 38,
+    "total_spend": 51299063.660000004,
+    "median_price": 700000.0
+  },
+  {
+    "eircode_district": "NAN",
+    "county": "Kildare",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 570000.0,
+    "median_price": 570000.0
+  },
+  {
+    "eircode_district": "NAN",
+    "county": "Louth",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 625000.0,
+    "median_price": 625000.0
+  },
+  {
+    "eircode_district": "NAN",
+    "county": "Meath",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 550000.0,
+    "median_price": 550000.0
+  },
+  {
+    "eircode_district": "NAN",
+    "county": "Sligo",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 590000.0,
+    "median_price": 590000.0
+  },
+  {
+    "eircode_district": "NAN",
+    "county": "Wicklow",
+    "nationality": "Unknown",
+    "tx_count": 3,
+    "total_spend": 1790000.0,
+    "median_price": 595000.0
+  },
+  {
+    "eircode_district": "P17",
+    "county": "Cork",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 925000.0,
+    "median_price": 925000.0
+  },
+  {
+    "eircode_district": "T12",
+    "county": "Cork",
+    "nationality": "Unknown",
+    "tx_count": 2,
+    "total_spend": 1212500.0,
+    "median_price": 606250.0
+  },
+  {
+    "eircode_district": "V94",
+    "county": "Limerick",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 1230000.0,
+    "median_price": 1230000.0
+  },
+  {
+    "eircode_district": "V95",
+    "county": "Clare",
+    "nationality": "Unknown",
+    "tx_count": 1,
+    "total_spend": 550000.0,
+    "median_price": 550000.0
+  },
+  {
+    "eircode_district": "W91",
+    "county": "Kildare",
+    "nationality": "Unknown",
+    "tx_count": 4,
+    "total_spend": 2519000.0,
+    "median_price": 630000.0
+  },
+  {
+    "eircode_district": "Y35",
+    "county": "Wexford",
+    "nationality": "Unknown",
+    "tx_count": 4,
+    "total_spend": 2394000.0,
+    "median_price": 600000.0
+  }
+]

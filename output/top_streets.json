@@ -1,0 +1,1746 @@
+[
+  {
+    "county": "Carlow",
+    "eircode_district": "Y21",
+    "median_price": 245000.0,
+    "sale_count": 51,
+    "luxury_count": 1,
+    "max_price": 1000000.0
+  },
+  {
+    "county": "Carlow",
+    "eircode_district": "R95",
+    "median_price": 234500.0,
+    "sale_count": 86,
+    "luxury_count": 1,
+    "max_price": 1270000.0
+  },
+  {
+    "county": "Carlow",
+    "eircode_district": "R93",
+    "median_price": 232000.0,
+    "sale_count": 2145,
+    "luxury_count": 10,
+    "max_price": 6295000.0
+  },
+  {
+    "county": "Carlow",
+    "eircode_district": "R21",
+    "median_price": 227500.0,
+    "sale_count": 189,
+    "luxury_count": 0,
+    "max_price": 725000.0
+  },
+  {
+    "county": "Carlow",
+    "eircode_district": "NAN",
+    "median_price": 150000.0,
+    "sale_count": 5526,
+    "luxury_count": 21,
+    "max_price": 5101321.59
+  },
+  {
+    "county": "Cavan",
+    "eircode_district": "N91",
+    "median_price": 260500.0,
+    "sale_count": 4,
+    "luxury_count": 0,
+    "max_price": 285000.0
+  },
+  {
+    "county": "Cavan",
+    "eircode_district": "A82",
+    "median_price": 230000.0,
+    "sale_count": 1165,
+    "luxury_count": 0,
+    "max_price": 800000.0
+  },
+  {
+    "county": "Cavan",
+    "eircode_district": "A81",
+    "median_price": 225000.0,
+    "sale_count": 71,
+    "luxury_count": 3,
+    "max_price": 1050000.0
+  },
+  {
+    "county": "Cavan",
+    "eircode_district": "H12",
+    "median_price": 192000.0,
+    "sale_count": 1307,
+    "luxury_count": 2,
+    "max_price": 1200000.0
+  },
+  {
+    "county": "Cavan",
+    "eircode_district": "H14",
+    "median_price": 167000.0,
+    "sale_count": 498,
+    "luxury_count": 0,
+    "max_price": 780000.0
+  },
+  {
+    "county": "Cavan",
+    "eircode_district": "H16",
+    "median_price": 161000.0,
+    "sale_count": 152,
+    "luxury_count": 1,
+    "max_price": 2108105.15
+  },
+  {
+    "county": "Cavan",
+    "eircode_district": "A12",
+    "median_price": 147500.0,
+    "sale_count": 8,
+    "luxury_count": 0,
+    "max_price": 360000.0
+  },
+  {
+    "county": "Cavan",
+    "eircode_district": "F91",
+    "median_price": 142500.0,
+    "sale_count": 50,
+    "luxury_count": 0,
+    "max_price": 380000.0
+  },
+  {
+    "county": "Cavan",
+    "eircode_district": "N41",
+    "median_price": 122000.0,
+    "sale_count": 16,
+    "luxury_count": 0,
+    "max_price": 325000.0
+  },
+  {
+    "county": "Cavan",
+    "eircode_district": "NAN",
+    "median_price": 105000.0,
+    "sale_count": 8035,
+    "luxury_count": 22,
+    "max_price": 8474268.49
+  },
+  {
+    "county": "Clare",
+    "eircode_district": "H91",
+    "median_price": 277500.0,
+    "sale_count": 88,
+    "luxury_count": 0,
+    "max_price": 745000.0
+  },
+  {
+    "county": "Clare",
+    "eircode_district": "V94",
+    "median_price": 267000.0,
+    "sale_count": 793,
+    "luxury_count": 8,
+    "max_price": 1500000.0
+  },
+  {
+    "county": "Clare",
+    "eircode_district": "V95",
+    "median_price": 250000.0,
+    "sale_count": 2949,
+    "luxury_count": 7,
+    "max_price": 2600000.0
+  },
+  {
+    "county": "Clare",
+    "eircode_district": "V14",
+    "median_price": 208000.0,
+    "sale_count": 489,
+    "luxury_count": 1,
+    "max_price": 10425586.0
+  },
+  {
+    "county": "Clare",
+    "eircode_district": "V15",
+    "median_price": 195000.0,
+    "sale_count": 734,
+    "luxury_count": 2,
+    "max_price": 1700000.0
+  },
+  {
+    "county": "Clare",
+    "eircode_district": "A12",
+    "median_price": 151250.0,
+    "sale_count": 4,
+    "luxury_count": 0,
+    "max_price": 327000.0
+  },
+  {
+    "county": "Clare",
+    "eircode_district": "NAN",
+    "median_price": 145000.0,
+    "sale_count": 11969,
+    "luxury_count": 42,
+    "max_price": 9352066.08
+  },
+  {
+    "county": "Cork",
+    "eircode_district": "V95",
+    "median_price": 440000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 518500.0
+  },
+  {
+    "county": "Cork",
+    "eircode_district": "P17",
+    "median_price": 435000.0,
+    "sale_count": 690,
+    "luxury_count": 55,
+    "max_price": 5500000.0
+  },
+  {
+    "county": "Cork",
+    "eircode_district": "P31",
+    "median_price": 355749.0,
+    "sale_count": 953,
+    "luxury_count": 8,
+    "max_price": 1500000.0
+  },
+  {
+    "county": "Cork",
+    "eircode_district": "P14",
+    "median_price": 355000.0,
+    "sale_count": 83,
+    "luxury_count": 0,
+    "max_price": 799600.0
+  },
+  {
+    "county": "Cork",
+    "eircode_district": "T34",
+    "median_price": 351000.0,
+    "sale_count": 71,
+    "luxury_count": 0,
+    "max_price": 620000.0
+  },
+  {
+    "county": "Cork",
+    "eircode_district": "T56",
+    "median_price": 350000.0,
+    "sale_count": 192,
+    "luxury_count": 0,
+    "max_price": 840000.0
+  },
+  {
+    "county": "Cork",
+    "eircode_district": "P43",
+    "median_price": 350000.0,
+    "sale_count": 1090,
+    "luxury_count": 17,
+    "max_price": 3050000.0
+  },
+  {
+    "county": "Cork",
+    "eircode_district": "T12",
+    "median_price": 348008.895,
+    "sale_count": 6440,
+    "luxury_count": 136,
+    "max_price": 5685000.0
+  },
+  {
+    "county": "Cork",
+    "eircode_district": "T45",
+    "median_price": 335000.0,
+    "sale_count": 1004,
+    "luxury_count": 5,
+    "max_price": 1460000.0
+  },
+  {
+    "county": "Cork",
+    "eircode_district": "P81",
+    "median_price": 333000.0,
+    "sale_count": 739,
+    "luxury_count": 29,
+    "max_price": 3399000.0
+  },
+  {
+    "county": "Donegal",
+    "eircode_district": "F91",
+    "median_price": 228000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 352500.0
+  },
+  {
+    "county": "Donegal",
+    "eircode_district": "A12",
+    "median_price": 178750.0,
+    "sale_count": 12,
+    "luxury_count": 0,
+    "max_price": 455000.0
+  },
+  {
+    "county": "Donegal",
+    "eircode_district": "F92",
+    "median_price": 175000.0,
+    "sale_count": 2107,
+    "luxury_count": 10,
+    "max_price": 4000000.0
+  },
+  {
+    "county": "Donegal",
+    "eircode_district": "F94",
+    "median_price": 172000.0,
+    "sale_count": 1626,
+    "luxury_count": 6,
+    "max_price": 2300000.0
+  },
+  {
+    "county": "Donegal",
+    "eircode_district": "F93",
+    "median_price": 155000.0,
+    "sale_count": 1780,
+    "luxury_count": 4,
+    "max_price": 1670000.0
+  },
+  {
+    "county": "Donegal",
+    "eircode_district": "NAN",
+    "median_price": 109000.0,
+    "sale_count": 14190,
+    "luxury_count": 15,
+    "max_price": 19963676.0
+  },
+  {
+    "county": "Dublin",
+    "eircode_district": "A94",
+    "median_price": 730000.0,
+    "sale_count": 3296,
+    "luxury_count": 746,
+    "max_price": 12000000.0
+  },
+  {
+    "county": "Dublin",
+    "eircode_district": "D06",
+    "median_price": 722000.0,
+    "sale_count": 2377,
+    "luxury_count": 821,
+    "max_price": 7500000.0
+  },
+  {
+    "county": "Dublin",
+    "eircode_district": "A96",
+    "median_price": 675000.0,
+    "sale_count": 3278,
+    "luxury_count": 839,
+    "max_price": 14820000.0
+  },
+  {
+    "county": "Dublin",
+    "eircode_district": "D14",
+    "median_price": 669000.0,
+    "sale_count": 2716,
+    "luxury_count": 408,
+    "max_price": 12766414.95
+  },
+  {
+    "county": "Dublin",
+    "eircode_district": "D6W",
+    "median_price": 660000.0,
+    "sale_count": 1445,
+    "luxury_count": 186,
+    "max_price": 2867521.0
+  },
+  {
+    "county": "Dublin",
+    "eircode_district": "D04",
+    "median_price": 650000.0,
+    "sale_count": 3503,
+    "luxury_count": 984,
+    "max_price": 12230000.0
+  },
+  {
+    "county": "Dublin",
+    "eircode_district": "A41",
+    "median_price": 650000.0,
+    "sale_count": 56,
+    "luxury_count": 6,
+    "max_price": 1250000.0
+  },
+  {
+    "county": "Dublin",
+    "eircode_district": "D16",
+    "median_price": 585000.0,
+    "sale_count": 2565,
+    "luxury_count": 99,
+    "max_price": 2734000.0
+  },
+  {
+    "county": "Dublin",
+    "eircode_district": "K36",
+    "median_price": 557500.0,
+    "sale_count": 1879,
+    "luxury_count": 244,
+    "max_price": 17200000.0
+  },
+  {
+    "county": "Dublin",
+    "eircode_district": "D18",
+    "median_price": 537444.93,
+    "sale_count": 4072,
+    "luxury_count": 459,
+    "max_price": 7255000.0
+  },
+  {
+    "county": "Galway",
+    "eircode_district": "H91",
+    "median_price": 335000.0,
+    "sale_count": 6822,
+    "luxury_count": 86,
+    "max_price": 5646714.0
+  },
+  {
+    "county": "Galway",
+    "eircode_district": "H65",
+    "median_price": 305000.0,
+    "sale_count": 453,
+    "luxury_count": 1,
+    "max_price": 2750000.0
+  },
+  {
+    "county": "Galway",
+    "eircode_district": "V94",
+    "median_price": 286000.0,
+    "sale_count": 4,
+    "luxury_count": 0,
+    "max_price": 335000.0
+  },
+  {
+    "county": "Galway",
+    "eircode_district": "R42",
+    "median_price": 285000.0,
+    "sale_count": 10,
+    "luxury_count": 2,
+    "max_price": 2025000.0
+  },
+  {
+    "county": "Galway",
+    "eircode_district": "A12",
+    "median_price": 275000.0,
+    "sale_count": 6,
+    "luxury_count": 0,
+    "max_price": 455000.0
+  },
+  {
+    "county": "Galway",
+    "eircode_district": "F12",
+    "median_price": 261000.0,
+    "sale_count": 38,
+    "luxury_count": 0,
+    "max_price": 608045.0
+  },
+  {
+    "county": "Galway",
+    "eircode_district": "H62",
+    "median_price": 250000.0,
+    "sale_count": 524,
+    "luxury_count": 1,
+    "max_price": 1000000.0
+  },
+  {
+    "county": "Galway",
+    "eircode_district": "H71",
+    "median_price": 250000.0,
+    "sale_count": 242,
+    "luxury_count": 6,
+    "max_price": 1994000.0
+  },
+  {
+    "county": "Galway",
+    "eircode_district": "H54",
+    "median_price": 225000.0,
+    "sale_count": 1012,
+    "luxury_count": 4,
+    "max_price": 4312775.33
+  },
+  {
+    "county": "Galway",
+    "eircode_district": "H53",
+    "median_price": 195000.0,
+    "sale_count": 982,
+    "luxury_count": 4,
+    "max_price": 5709251.1
+  },
+  {
+    "county": "Kerry",
+    "eircode_district": "C93",
+    "median_price": 330000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 587000.0
+  },
+  {
+    "county": "Kerry",
+    "eircode_district": "V93",
+    "median_price": 280000.0,
+    "sale_count": 2033,
+    "luxury_count": 20,
+    "max_price": 8760074.01
+  },
+  {
+    "county": "Kerry",
+    "eircode_district": "V23",
+    "median_price": 250000.0,
+    "sale_count": 393,
+    "luxury_count": 4,
+    "max_price": 3400000.0
+  },
+  {
+    "county": "Kerry",
+    "eircode_district": "V92",
+    "median_price": 220000.0,
+    "sale_count": 2373,
+    "luxury_count": 11,
+    "max_price": 5770000.0
+  },
+  {
+    "county": "Kerry",
+    "eircode_district": "V31",
+    "median_price": 210000.0,
+    "sale_count": 616,
+    "luxury_count": 0,
+    "max_price": 750000.0
+  },
+  {
+    "county": "Kerry",
+    "eircode_district": "P51",
+    "median_price": 194000.0,
+    "sale_count": 98,
+    "luxury_count": 0,
+    "max_price": 800000.0
+  },
+  {
+    "county": "Kerry",
+    "eircode_district": "T12",
+    "median_price": 174000.0,
+    "sale_count": 5,
+    "luxury_count": 0,
+    "max_price": 442500.0
+  },
+  {
+    "county": "Kerry",
+    "eircode_district": "NAN",
+    "median_price": 149207.925,
+    "sale_count": 14578,
+    "luxury_count": 77,
+    "max_price": 16472967.28
+  },
+  {
+    "county": "Kerry",
+    "eircode_district": "V94",
+    "median_price": 135000.0,
+    "sale_count": 8,
+    "luxury_count": 0,
+    "max_price": 300000.0
+  },
+  {
+    "county": "Kildare",
+    "eircode_district": "A83",
+    "median_price": 481000.0,
+    "sale_count": 24,
+    "luxury_count": 0,
+    "max_price": 695000.0
+  },
+  {
+    "county": "Kildare",
+    "eircode_district": "W23",
+    "median_price": 405000.0,
+    "sale_count": 2893,
+    "luxury_count": 66,
+    "max_price": 8325991.19
+  },
+  {
+    "county": "Kildare",
+    "eircode_district": "W91",
+    "median_price": 375000.0,
+    "sale_count": 3447,
+    "luxury_count": 71,
+    "max_price": 4064220.18
+  },
+  {
+    "county": "Kildare",
+    "eircode_district": "R45",
+    "median_price": 364500.0,
+    "sale_count": 14,
+    "luxury_count": 2,
+    "max_price": 2200000.0
+  },
+  {
+    "county": "Kildare",
+    "eircode_district": "A12",
+    "median_price": 340000.0,
+    "sale_count": 4,
+    "luxury_count": 0,
+    "max_price": 820000.0
+  },
+  {
+    "county": "Kildare",
+    "eircode_district": "W12",
+    "median_price": 337000.0,
+    "sale_count": 1359,
+    "luxury_count": 5,
+    "max_price": 2405000.0
+  },
+  {
+    "county": "Kildare",
+    "eircode_district": "R56",
+    "median_price": 330000.0,
+    "sale_count": 476,
+    "luxury_count": 7,
+    "max_price": 1493650.0
+  },
+  {
+    "county": "Kildare",
+    "eircode_district": "R51",
+    "median_price": 310000.0,
+    "sale_count": 784,
+    "luxury_count": 2,
+    "max_price": 1700000.0
+  },
+  {
+    "county": "Kildare",
+    "eircode_district": "NAN",
+    "median_price": 281938.325,
+    "sale_count": 29380,
+    "luxury_count": 203,
+    "max_price": 15795529.52
+  },
+  {
+    "county": "Kildare",
+    "eircode_district": "W34",
+    "median_price": 275000.0,
+    "sale_count": 331,
+    "luxury_count": 0,
+    "max_price": 935000.0
+  },
+  {
+    "county": "Kilkenny",
+    "eircode_district": "R93",
+    "median_price": 362500.0,
+    "sale_count": 16,
+    "luxury_count": 0,
+    "max_price": 440000.0
+  },
+  {
+    "county": "Kilkenny",
+    "eircode_district": "A12",
+    "median_price": 290000.0,
+    "sale_count": 10,
+    "luxury_count": 1,
+    "max_price": 1600000.0
+  },
+  {
+    "county": "Kilkenny",
+    "eircode_district": "R95",
+    "median_price": 272000.0,
+    "sale_count": 2656,
+    "luxury_count": 29,
+    "max_price": 5900000.0
+  },
+  {
+    "county": "Kilkenny",
+    "eircode_district": "R32",
+    "median_price": 255000.0,
+    "sale_count": 9,
+    "luxury_count": 0,
+    "max_price": 446000.0
+  },
+  {
+    "county": "Kilkenny",
+    "eircode_district": "R96",
+    "median_price": 247000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 470000.0
+  },
+  {
+    "county": "Kilkenny",
+    "eircode_district": "E32",
+    "median_price": 242500.0,
+    "sale_count": 136,
+    "luxury_count": 1,
+    "max_price": 1250000.0
+  },
+  {
+    "county": "Kilkenny",
+    "eircode_district": "X91",
+    "median_price": 229000.0,
+    "sale_count": 523,
+    "luxury_count": 1,
+    "max_price": 1000000.0
+  },
+  {
+    "county": "Kilkenny",
+    "eircode_district": "Y34",
+    "median_price": 229000.0,
+    "sale_count": 43,
+    "luxury_count": 0,
+    "max_price": 553000.0
+  },
+  {
+    "county": "Kilkenny",
+    "eircode_district": "E41",
+    "median_price": 175000.0,
+    "sale_count": 85,
+    "luxury_count": 0,
+    "max_price": 625000.0
+  },
+  {
+    "county": "Kilkenny",
+    "eircode_district": "NAN",
+    "median_price": 172000.0,
+    "sale_count": 8124,
+    "luxury_count": 38,
+    "max_price": 12600000.0
+  },
+  {
+    "county": "Laois",
+    "eircode_district": "R35",
+    "median_price": 315000.0,
+    "sale_count": 7,
+    "luxury_count": 0,
+    "max_price": 500000.0
+  },
+  {
+    "county": "Laois",
+    "eircode_district": "R93",
+    "median_price": 256000.0,
+    "sale_count": 239,
+    "luxury_count": 0,
+    "max_price": 815000.0
+  },
+  {
+    "county": "Laois",
+    "eircode_district": "R14",
+    "median_price": 225000.0,
+    "sale_count": 89,
+    "luxury_count": 0,
+    "max_price": 673000.0
+  },
+  {
+    "county": "Laois",
+    "eircode_district": "R32",
+    "median_price": 225000.0,
+    "sale_count": 3449,
+    "luxury_count": 5,
+    "max_price": 11500000.0
+  },
+  {
+    "county": "Laois",
+    "eircode_district": "A12",
+    "median_price": 185500.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 460000.0
+  },
+  {
+    "county": "Laois",
+    "eircode_district": "NAN",
+    "median_price": 157500.0,
+    "sale_count": 8461,
+    "luxury_count": 40,
+    "max_price": 11694389.0
+  },
+  {
+    "county": "Leitrim",
+    "eircode_district": "F94",
+    "median_price": 232500.0,
+    "sale_count": 6,
+    "luxury_count": 0,
+    "max_price": 435000.0
+  },
+  {
+    "county": "Leitrim",
+    "eircode_district": "N39",
+    "median_price": 190000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 199500.0
+  },
+  {
+    "county": "Leitrim",
+    "eircode_district": "F91",
+    "median_price": 180000.0,
+    "sale_count": 523,
+    "luxury_count": 0,
+    "max_price": 895000.0
+  },
+  {
+    "county": "Leitrim",
+    "eircode_district": "N41",
+    "median_price": 167500.0,
+    "sale_count": 1381,
+    "luxury_count": 0,
+    "max_price": 950000.0
+  },
+  {
+    "county": "Leitrim",
+    "eircode_district": "H12",
+    "median_price": 163000.0,
+    "sale_count": 97,
+    "luxury_count": 0,
+    "max_price": 352500.0
+  },
+  {
+    "county": "Leitrim",
+    "eircode_district": "NAN",
+    "median_price": 86000.0,
+    "sale_count": 4631,
+    "luxury_count": 1,
+    "max_price": 1620000.0
+  },
+  {
+    "county": "Limerick",
+    "eircode_district": "V94",
+    "median_price": 257000.0,
+    "sale_count": 6991,
+    "luxury_count": 56,
+    "max_price": 14757788.0
+  },
+  {
+    "county": "Limerick",
+    "eircode_district": "V35",
+    "median_price": 200000.0,
+    "sale_count": 680,
+    "luxury_count": 3,
+    "max_price": 10800000.0
+  },
+  {
+    "county": "Limerick",
+    "eircode_district": "E34",
+    "median_price": 197500.0,
+    "sale_count": 52,
+    "luxury_count": 0,
+    "max_price": 425000.0
+  },
+  {
+    "county": "Limerick",
+    "eircode_district": "V42",
+    "median_price": 197500.0,
+    "sale_count": 604,
+    "luxury_count": 0,
+    "max_price": 825000.0
+  },
+  {
+    "county": "Limerick",
+    "eircode_district": "V95",
+    "median_price": 190000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 235000.0
+  },
+  {
+    "county": "Limerick",
+    "eircode_district": "P56",
+    "median_price": 179000.0,
+    "sale_count": 49,
+    "luxury_count": 0,
+    "max_price": 470000.0
+  },
+  {
+    "county": "Limerick",
+    "eircode_district": "NAN",
+    "median_price": 160000.0,
+    "sale_count": 19448,
+    "luxury_count": 85,
+    "max_price": 17621145.0
+  },
+  {
+    "county": "Limerick",
+    "eircode_district": "P67",
+    "median_price": 155000.0,
+    "sale_count": 4,
+    "luxury_count": 0,
+    "max_price": 385000.0
+  },
+  {
+    "county": "Limerick",
+    "eircode_district": "A12",
+    "median_price": 135000.0,
+    "sale_count": 6,
+    "luxury_count": 0,
+    "max_price": 625000.0
+  },
+  {
+    "county": "Limerick",
+    "eircode_district": "V92",
+    "median_price": 132500.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 255000.0
+  },
+  {
+    "county": "Longford",
+    "eircode_district": "N41",
+    "median_price": 385000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 449000.0
+  },
+  {
+    "county": "Longford",
+    "eircode_district": "N39",
+    "median_price": 165000.0,
+    "sale_count": 1920,
+    "luxury_count": 1,
+    "max_price": 3937256.0
+  },
+  {
+    "county": "Longford",
+    "eircode_district": "N91",
+    "median_price": 149000.0,
+    "sale_count": 7,
+    "luxury_count": 0,
+    "max_price": 300000.0
+  },
+  {
+    "county": "Longford",
+    "eircode_district": "NAN",
+    "median_price": 83250.0,
+    "sale_count": 4156,
+    "luxury_count": 4,
+    "max_price": 2490000.0
+  },
+  {
+    "county": "Louth",
+    "eircode_district": "A98",
+    "median_price": 519823.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 572687.0
+  },
+  {
+    "county": "Louth",
+    "eircode_district": "A92",
+    "median_price": 256000.0,
+    "sale_count": 2972,
+    "luxury_count": 16,
+    "max_price": 4000000.0
+  },
+  {
+    "county": "Louth",
+    "eircode_district": "A91",
+    "median_price": 242750.0,
+    "sale_count": 2970,
+    "luxury_count": 2,
+    "max_price": 1750000.0
+  },
+  {
+    "county": "Louth",
+    "eircode_district": "NAN",
+    "median_price": 190000.0,
+    "sale_count": 14897,
+    "luxury_count": 84,
+    "max_price": 19885952.49
+  },
+  {
+    "county": "Mayo",
+    "eircode_district": "F28",
+    "median_price": 263500.0,
+    "sale_count": 1022,
+    "luxury_count": 10,
+    "max_price": 2865000.0
+  },
+  {
+    "county": "Mayo",
+    "eircode_district": "H91",
+    "median_price": 262490.0,
+    "sale_count": 65,
+    "luxury_count": 0,
+    "max_price": 744120.0
+  },
+  {
+    "county": "Mayo",
+    "eircode_district": "F23",
+    "median_price": 210000.0,
+    "sale_count": 1102,
+    "luxury_count": 1,
+    "max_price": 4327867.36
+  },
+  {
+    "county": "Mayo",
+    "eircode_district": "A82",
+    "median_price": 183000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 313000.0
+  },
+  {
+    "county": "Mayo",
+    "eircode_district": "F12",
+    "median_price": 180000.0,
+    "sale_count": 1191,
+    "luxury_count": 0,
+    "max_price": 790000.0
+  },
+  {
+    "county": "Mayo",
+    "eircode_district": "F31",
+    "median_price": 180000.0,
+    "sale_count": 303,
+    "luxury_count": 1,
+    "max_price": 1030117.0
+  },
+  {
+    "county": "Mayo",
+    "eircode_district": "F26",
+    "median_price": 166000.0,
+    "sale_count": 1403,
+    "luxury_count": 2,
+    "max_price": 1360000.0
+  },
+  {
+    "county": "Mayo",
+    "eircode_district": "H54",
+    "median_price": 142500.0,
+    "sale_count": 8,
+    "luxury_count": 0,
+    "max_price": 210000.0
+  },
+  {
+    "county": "Mayo",
+    "eircode_district": "F35",
+    "median_price": 139000.0,
+    "sale_count": 336,
+    "luxury_count": 2,
+    "max_price": 2970000.0
+  },
+  {
+    "county": "Mayo",
+    "eircode_district": "F45",
+    "median_price": 136000.0,
+    "sale_count": 37,
+    "luxury_count": 0,
+    "max_price": 310000.0
+  },
+  {
+    "county": "Meath",
+    "eircode_district": "D02",
+    "median_price": 725000.0,
+    "sale_count": 4,
+    "luxury_count": 0,
+    "max_price": 800000.0
+  },
+  {
+    "county": "Meath",
+    "eircode_district": "D11",
+    "median_price": 571250.0,
+    "sale_count": 16,
+    "luxury_count": 1,
+    "max_price": 1100000.0
+  },
+  {
+    "county": "Meath",
+    "eircode_district": "W23",
+    "median_price": 490000.0,
+    "sale_count": 59,
+    "luxury_count": 1,
+    "max_price": 1025000.0
+  },
+  {
+    "county": "Meath",
+    "eircode_district": "A42",
+    "median_price": 479000.0,
+    "sale_count": 28,
+    "luxury_count": 0,
+    "max_price": 800000.0
+  },
+  {
+    "county": "Meath",
+    "eircode_district": "A85",
+    "median_price": 423953.745,
+    "sale_count": 852,
+    "luxury_count": 15,
+    "max_price": 1975100.0
+  },
+  {
+    "county": "Meath",
+    "eircode_district": "A86",
+    "median_price": 421750.0,
+    "sale_count": 374,
+    "luxury_count": 7,
+    "max_price": 1975000.0
+  },
+  {
+    "county": "Meath",
+    "eircode_district": "D15",
+    "median_price": 346000.0,
+    "sale_count": 141,
+    "luxury_count": 9,
+    "max_price": 1725000.0
+  },
+  {
+    "county": "Meath",
+    "eircode_district": "K32",
+    "median_price": 341000.0,
+    "sale_count": 202,
+    "luxury_count": 3,
+    "max_price": 1550000.0
+  },
+  {
+    "county": "Meath",
+    "eircode_district": "A83",
+    "median_price": 335000.0,
+    "sale_count": 463,
+    "luxury_count": 4,
+    "max_price": 3150000.0
+  },
+  {
+    "county": "Meath",
+    "eircode_district": "A84",
+    "median_price": 325000.0,
+    "sale_count": 785,
+    "luxury_count": 1,
+    "max_price": 1075000.0
+  },
+  {
+    "county": "Monaghan",
+    "eircode_district": "A81",
+    "median_price": 220000.0,
+    "sale_count": 423,
+    "luxury_count": 0,
+    "max_price": 835000.0
+  },
+  {
+    "county": "Monaghan",
+    "eircode_district": "H16",
+    "median_price": 218500.0,
+    "sale_count": 4,
+    "luxury_count": 0,
+    "max_price": 245000.0
+  },
+  {
+    "county": "Monaghan",
+    "eircode_district": "H18",
+    "median_price": 201000.0,
+    "sale_count": 761,
+    "luxury_count": 0,
+    "max_price": 750000.0
+  },
+  {
+    "county": "Monaghan",
+    "eircode_district": "A91",
+    "median_price": 197500.0,
+    "sale_count": 18,
+    "luxury_count": 0,
+    "max_price": 585000.0
+  },
+  {
+    "county": "Monaghan",
+    "eircode_district": "A75",
+    "median_price": 190000.0,
+    "sale_count": 421,
+    "luxury_count": 2,
+    "max_price": 1200000.0
+  },
+  {
+    "county": "Monaghan",
+    "eircode_district": "H23",
+    "median_price": 137000.0,
+    "sale_count": 138,
+    "luxury_count": 0,
+    "max_price": 634400.0
+  },
+  {
+    "county": "Monaghan",
+    "eircode_district": "NAN",
+    "median_price": 124000.0,
+    "sale_count": 3862,
+    "luxury_count": 15,
+    "max_price": 2537444.93
+  },
+  {
+    "county": "Offaly",
+    "eircode_district": "R51",
+    "median_price": 300000.0,
+    "sale_count": 16,
+    "luxury_count": 0,
+    "max_price": 600000.0
+  },
+  {
+    "county": "Offaly",
+    "eircode_district": "N37",
+    "median_price": 250000.0,
+    "sale_count": 37,
+    "luxury_count": 0,
+    "max_price": 770000.0
+  },
+  {
+    "county": "Offaly",
+    "eircode_district": "R45",
+    "median_price": 240000.0,
+    "sale_count": 477,
+    "luxury_count": 0,
+    "max_price": 850000.0
+  },
+  {
+    "county": "Offaly",
+    "eircode_district": "R35",
+    "median_price": 230000.0,
+    "sale_count": 1567,
+    "luxury_count": 2,
+    "max_price": 3103427.31
+  },
+  {
+    "county": "Offaly",
+    "eircode_district": "E53",
+    "median_price": 220000.0,
+    "sale_count": 51,
+    "luxury_count": 0,
+    "max_price": 987500.0
+  },
+  {
+    "county": "Offaly",
+    "eircode_district": "R32",
+    "median_price": 220000.0,
+    "sale_count": 162,
+    "luxury_count": 0,
+    "max_price": 551000.0
+  },
+  {
+    "county": "Offaly",
+    "eircode_district": "N91",
+    "median_price": 190000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 350000.0
+  },
+  {
+    "county": "Offaly",
+    "eircode_district": "R42",
+    "median_price": 185000.0,
+    "sale_count": 678,
+    "luxury_count": 1,
+    "max_price": 1200000.0
+  },
+  {
+    "county": "Offaly",
+    "eircode_district": "NAN",
+    "median_price": 137000.0,
+    "sale_count": 6289,
+    "luxury_count": 10,
+    "max_price": 12984237.89
+  },
+  {
+    "county": "Offaly",
+    "eircode_district": "F26",
+    "median_price": 100000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 150000.0
+  },
+  {
+    "county": "Roscommon",
+    "eircode_district": "N37",
+    "median_price": 235500.0,
+    "sale_count": 457,
+    "luxury_count": 1,
+    "max_price": 1483840.0
+  },
+  {
+    "county": "Roscommon",
+    "eircode_district": "F91",
+    "median_price": 235000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 240000.0
+  },
+  {
+    "county": "Roscommon",
+    "eircode_district": "F42",
+    "median_price": 210000.0,
+    "sale_count": 710,
+    "luxury_count": 2,
+    "max_price": 1755000.0
+  },
+  {
+    "county": "Roscommon",
+    "eircode_district": "H53",
+    "median_price": 200000.0,
+    "sale_count": 64,
+    "luxury_count": 0,
+    "max_price": 385000.0
+  },
+  {
+    "county": "Roscommon",
+    "eircode_district": "N39",
+    "median_price": 182250.0,
+    "sale_count": 140,
+    "luxury_count": 0,
+    "max_price": 550000.0
+  },
+  {
+    "county": "Roscommon",
+    "eircode_district": "F52",
+    "median_price": 170000.0,
+    "sale_count": 464,
+    "luxury_count": 0,
+    "max_price": 836200.0
+  },
+  {
+    "county": "Roscommon",
+    "eircode_district": "N41",
+    "median_price": 170000.0,
+    "sale_count": 251,
+    "luxury_count": 0,
+    "max_price": 670000.0
+  },
+  {
+    "county": "Roscommon",
+    "eircode_district": "F35",
+    "median_price": 150000.0,
+    "sale_count": 45,
+    "luxury_count": 0,
+    "max_price": 425000.0
+  },
+  {
+    "county": "Roscommon",
+    "eircode_district": "F54",
+    "median_price": 139000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 200000.0
+  },
+  {
+    "county": "Roscommon",
+    "eircode_district": "F45",
+    "median_price": 135000.0,
+    "sale_count": 983,
+    "luxury_count": 2,
+    "max_price": 3850000.0
+  },
+  {
+    "county": "Sligo",
+    "eircode_district": "F26",
+    "median_price": 218000.0,
+    "sale_count": 237,
+    "luxury_count": 1,
+    "max_price": 1450000.0
+  },
+  {
+    "county": "Sligo",
+    "eircode_district": "F91",
+    "median_price": 210000.0,
+    "sale_count": 2379,
+    "luxury_count": 13,
+    "max_price": 3000000.0
+  },
+  {
+    "county": "Sligo",
+    "eircode_district": "F12",
+    "median_price": 168000.0,
+    "sale_count": 26,
+    "luxury_count": 0,
+    "max_price": 271000.0
+  },
+  {
+    "county": "Sligo",
+    "eircode_district": "F52",
+    "median_price": 168000.0,
+    "sale_count": 147,
+    "luxury_count": 0,
+    "max_price": 450000.0
+  },
+  {
+    "county": "Sligo",
+    "eircode_district": "F56",
+    "median_price": 159500.0,
+    "sale_count": 397,
+    "luxury_count": 0,
+    "max_price": 468000.0
+  },
+  {
+    "county": "Sligo",
+    "eircode_district": "F45",
+    "median_price": 156000.0,
+    "sale_count": 15,
+    "luxury_count": 0,
+    "max_price": 405000.0
+  },
+  {
+    "county": "Sligo",
+    "eircode_district": "H91",
+    "median_price": 152000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 170000.0
+  },
+  {
+    "county": "Sligo",
+    "eircode_district": "A12",
+    "median_price": 150000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 159000.0
+  },
+  {
+    "county": "Sligo",
+    "eircode_district": "D02",
+    "median_price": 129000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 135000.0
+  },
+  {
+    "county": "Sligo",
+    "eircode_district": "NAN",
+    "median_price": 116000.0,
+    "sale_count": 7878,
+    "luxury_count": 16,
+    "max_price": 5559481.0
+  },
+  {
+    "county": "Tipperary",
+    "eircode_district": "R95",
+    "median_price": 308000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 427000.0
+  },
+  {
+    "county": "Tipperary",
+    "eircode_district": "V94",
+    "median_price": 300000.0,
+    "sale_count": 363,
+    "luxury_count": 4,
+    "max_price": 1600000.0
+  },
+  {
+    "county": "Tipperary",
+    "eircode_district": "X35",
+    "median_price": 300000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 381000.0
+  },
+  {
+    "county": "Tipperary",
+    "eircode_district": "R42",
+    "median_price": 250000.0,
+    "sale_count": 50,
+    "luxury_count": 0,
+    "max_price": 482500.0
+  },
+  {
+    "county": "Tipperary",
+    "eircode_district": "E45",
+    "median_price": 225000.0,
+    "sale_count": 1043,
+    "luxury_count": 3,
+    "max_price": 2750000.0
+  },
+  {
+    "county": "Tipperary",
+    "eircode_district": "E91",
+    "median_price": 216000.0,
+    "sale_count": 1303,
+    "luxury_count": 6,
+    "max_price": 1400000.0
+  },
+  {
+    "county": "Tipperary",
+    "eircode_district": "E21",
+    "median_price": 210000.0,
+    "sale_count": 361,
+    "luxury_count": 1,
+    "max_price": 1210000.0
+  },
+  {
+    "county": "Tipperary",
+    "eircode_district": "E25",
+    "median_price": 195500.0,
+    "sale_count": 526,
+    "luxury_count": 0,
+    "max_price": 965000.0
+  },
+  {
+    "county": "Tipperary",
+    "eircode_district": "E41",
+    "median_price": 195000.0,
+    "sale_count": 1123,
+    "luxury_count": 3,
+    "max_price": 1620000.0
+  },
+  {
+    "county": "Tipperary",
+    "eircode_district": "E32",
+    "median_price": 188000.0,
+    "sale_count": 315,
+    "luxury_count": 0,
+    "max_price": 820000.0
+  },
+  {
+    "county": "Waterford",
+    "eircode_district": "X34",
+    "median_price": 487500.0,
+    "sale_count": 4,
+    "luxury_count": 0,
+    "max_price": 600000.0
+  },
+  {
+    "county": "Waterford",
+    "eircode_district": "P36",
+    "median_price": 350000.0,
+    "sale_count": 107,
+    "luxury_count": 4,
+    "max_price": 1500000.0
+  },
+  {
+    "county": "Waterford",
+    "eircode_district": "Y21",
+    "median_price": 275000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 847000.0
+  },
+  {
+    "county": "Waterford",
+    "eircode_district": "X35",
+    "median_price": 265000.0,
+    "sale_count": 815,
+    "luxury_count": 5,
+    "max_price": 3704850.0
+  },
+  {
+    "county": "Waterford",
+    "eircode_district": "E91",
+    "median_price": 255000.0,
+    "sale_count": 75,
+    "luxury_count": 0,
+    "max_price": 740000.0
+  },
+  {
+    "county": "Waterford",
+    "eircode_district": "E32",
+    "median_price": 250000.0,
+    "sale_count": 43,
+    "luxury_count": 0,
+    "max_price": 850000.0
+  },
+  {
+    "county": "Waterford",
+    "eircode_district": "X42",
+    "median_price": 245000.0,
+    "sale_count": 218,
+    "luxury_count": 0,
+    "max_price": 800000.0
+  },
+  {
+    "county": "Waterford",
+    "eircode_district": "X91",
+    "median_price": 222000.0,
+    "sale_count": 4565,
+    "luxury_count": 23,
+    "max_price": 10422730.0
+  },
+  {
+    "county": "Waterford",
+    "eircode_district": "P51",
+    "median_price": 211000.0,
+    "sale_count": 378,
+    "luxury_count": 3,
+    "max_price": 3480000.0
+  },
+  {
+    "county": "Waterford",
+    "eircode_district": "D04",
+    "median_price": 200000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 225000.0
+  },
+  {
+    "county": "Westmeath",
+    "eircode_district": "N39",
+    "median_price": 268000.0,
+    "sale_count": 11,
+    "luxury_count": 0,
+    "max_price": 432000.0
+  },
+  {
+    "county": "Westmeath",
+    "eircode_district": "N91",
+    "median_price": 248000.0,
+    "sale_count": 2651,
+    "luxury_count": 7,
+    "max_price": 6040000.0
+  },
+  {
+    "county": "Westmeath",
+    "eircode_district": "N37",
+    "median_price": 235000.0,
+    "sale_count": 1554,
+    "luxury_count": 4,
+    "max_price": 2970000.0
+  },
+  {
+    "county": "Westmeath",
+    "eircode_district": "C15",
+    "median_price": 221250.0,
+    "sale_count": 36,
+    "luxury_count": 0,
+    "max_price": 520000.0
+  },
+  {
+    "county": "Westmeath",
+    "eircode_district": "NAN",
+    "median_price": 145000.0,
+    "sale_count": 9927,
+    "luxury_count": 32,
+    "max_price": 14000000.0
+  },
+  {
+    "county": "Wexford",
+    "eircode_district": "Y14",
+    "median_price": 395000.0,
+    "sale_count": 14,
+    "luxury_count": 0,
+    "max_price": 625000.0
+  },
+  {
+    "county": "Wexford",
+    "eircode_district": "W12",
+    "median_price": 390000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 500000.0
+  },
+  {
+    "county": "Wexford",
+    "eircode_district": "A12",
+    "median_price": 386000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 400000.0
+  },
+  {
+    "county": "Wexford",
+    "eircode_district": "Y25",
+    "median_price": 275000.0,
+    "sale_count": 1960,
+    "luxury_count": 13,
+    "max_price": 1800000.0
+  },
+  {
+    "county": "Wexford",
+    "eircode_district": "Y35",
+    "median_price": 245000.0,
+    "sale_count": 3140,
+    "luxury_count": 9,
+    "max_price": 1830000.0
+  },
+  {
+    "county": "Wexford",
+    "eircode_district": "Y21",
+    "median_price": 225000.0,
+    "sale_count": 1858,
+    "luxury_count": 3,
+    "max_price": 1495000.0
+  },
+  {
+    "county": "Wexford",
+    "eircode_district": "Y36",
+    "median_price": 210000.0,
+    "sale_count": 3,
+    "luxury_count": 0,
+    "max_price": 326000.0
+  },
+  {
+    "county": "Wexford",
+    "eircode_district": "Y34",
+    "median_price": 188500.0,
+    "sale_count": 1044,
+    "luxury_count": 1,
+    "max_price": 2151000.0
+  },
+  {
+    "county": "Wexford",
+    "eircode_district": "NAN",
+    "median_price": 160000.0,
+    "sale_count": 17727,
+    "luxury_count": 60,
+    "max_price": 13995000.0
+  },
+  {
+    "county": "Wicklow",
+    "eircode_district": "A96",
+    "median_price": 660000.0,
+    "sale_count": 3,
+    "luxury_count": 1,
+    "max_price": 1893500.0
+  },
+  {
+    "county": "Wicklow",
+    "eircode_district": "A12",
+    "median_price": 582500.0,
+    "sale_count": 6,
+    "luxury_count": 0,
+    "max_price": 920000.0
+  },
+  {
+    "county": "Wicklow",
+    "eircode_district": "A63",
+    "median_price": 485000.0,
+    "sale_count": 2024,
+    "luxury_count": 178,
+    "max_price": 3823920.0
+  },
+  {
+    "county": "Wicklow",
+    "eircode_district": "A98",
+    "median_price": 460000.0,
+    "sale_count": 1785,
+    "luxury_count": 132,
+    "max_price": 9399000.0
+  },
+  {
+    "county": "Wicklow",
+    "eircode_district": "D18",
+    "median_price": 425000.0,
+    "sale_count": 4,
+    "luxury_count": 0,
+    "max_price": 670000.0
+  },
+  {
+    "county": "Wicklow",
+    "eircode_district": "A67",
+    "median_price": 385000.0,
+    "sale_count": 1440,
+    "luxury_count": 27,
+    "max_price": 4000000.0
+  },
+  {
+    "county": "Wicklow",
+    "eircode_district": "Y25",
+    "median_price": 365638.76,
+    "sale_count": 5,
+    "luxury_count": 0,
+    "max_price": 650000.0
+  },
+  {
+    "county": "Wicklow",
+    "eircode_district": "W91",
+    "median_price": 326500.0,
+    "sale_count": 738,
+    "luxury_count": 9,
+    "max_price": 5644235.58
+  },
+  {
+    "county": "Wicklow",
+    "eircode_district": "NAN",
+    "median_price": 308369.81,
+    "sale_count": 18197,
+    "luxury_count": 293,
+    "max_price": 15344065.66
+  },
+  {
+    "county": "Wicklow",
+    "eircode_district": "Y14",
+    "median_price": 275000.0,
+    "sale_count": 1120,
+    "luxury_count": 8,
+    "max_price": 3200000.0
+  }
+]

@@ -64,7 +64,7 @@ RENAME = {
     "Address":                        "address",
     "County":                         "county",
     "Eircode":                        "eircode",
-    "Price (€)":                      "price_raw",
+    "Price (\x80)":                   "price_raw",
     "Not Full Market Price":          "not_full_market",
     "VAT Exclusive":                  "vat_exclusive",
     "Description of Property":        "property_desc",
@@ -76,7 +76,7 @@ df.rename(columns={k: v for k, v in RENAME.items() if k in df.columns}, inplace=
 def parse_price(raw):
     if pd.isna(raw):
         return np.nan
-    cleaned = re.sub(r"[€,\s]", "", str(raw))
+    cleaned = re.sub(r"[€,\s\x80]", "", str(raw))
     try:
         return float(cleaned)
     except ValueError:

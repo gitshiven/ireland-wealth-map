@@ -116,7 +116,7 @@ def run():
     base["surprise_score"] = (
         base["price_cagr_5yr"].fillna(0) * (1 - base["baseline_rank"])
     ).round(2)
-    base["surprise_rank"] = base["surprise_score"].rank(ascending=False).fillna(0).astype(int)
+    base["surprise_rank"] = base[base["surprise_score"] > 0]["surprise_score"].rank(ascending=False).reindex(base.index).fillna(999).astype(int)
 
     # ── 8. Optional Pobal deprivation join ────────────────────────────────────
     if POBAL.exists():
