@@ -1,6 +1,7 @@
 # Ireland Wealth Map
 
 **Live site: [ireland-wealth-map.vercel.app](https://ireland-wealth-map.vercel.app)**
+**Live dashboard: [dashboard](https://ireland-wealth-map.vercel.app/dashboard)**
 
 A full-stack data engineering and visualisation project analysing property wealth concentration across all 26 Irish counties using the national Property Price Register.
 
