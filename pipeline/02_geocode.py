@@ -1,17 +1,24 @@
 """
-Step 2 — Geocode PPR Records
-=============================
+Step 2 — Geocode PPR Records (Fixed)
+======================================
 Input : data/processed/ppr_clean.parquet
 Output: data/processed/ppr_geocoded.parquet
 
-Strategy (free, no API key):
-  1. Eircode lookup via api.postcodes.io  (fast, covers ~80% of records)
-  2. Fallback: Nominatim (OSM) address geocoding for remainder
-  3. County centroid fallback for anything still unmatched
+Strategy:
+  1. Luxury sales (>=€1m) — Nominatim address geocoding  (~4.5hrs, 15k records)
+  2. Everything else      — county centroid with jitter   (instant)
 
-Rate limits respected — 1 req/s for Nominatim as required.
+Nominatim: free, no key, 1 req/s rate limit (strictly enforced).
+Resume-safe: saves progress every 500 records so interruptions don't lose work.
+
+Usage:
+    python pipeline/02_geocode.py
+    python pipeline/02_geocode.py --all      # geocode all records (slow, days)
+    python pipeline/02_geocode.py --limit 500  # test with 500 luxury records
 """
 
+import argparse
+import json
 import time
 from pathlib import Path
 
@@ -20,156 +27,184 @@ import pandas as pd
 import requests
 from tqdm import tqdm
 
-IN  = Path("data/processed/ppr_clean.parquet")
-OUT = Path("data/processed/ppr_geocoded.parquet")
+IN       = Path("data/processed/ppr_clean.parquet")
+OUT      = Path("data/processed/ppr_geocoded.parquet")
+CACHE_F  = Path("data/processed/geocode_cache.json")
 
-# County centroids (fallback of last resort)
+HEADERS  = {"User-Agent": "IrelandWealthMap/1.0 (research project, Dublin)"}
+
 COUNTY_CENTROIDS = {
-    "Dublin":     (53.3498, -6.2603),
-    "Cork":       (51.8985, -8.4756),
-    "Galway":     (53.2707, -9.0568),
-    "Limerick":   (52.6638, -8.6267),
-    "Waterford":  (52.2593, -7.1101),
-    "Kildare":    (53.1581, -6.9094),
-    "Meath":      (53.6055, -6.6564),
-    "Wicklow":    (52.9808, -6.3782),
-    "Wexford":    (52.3369, -6.4633),
-    "Kerry":      (52.1545, -9.5669),
-    "Clare":      (52.9045, -8.9812),
-    "Tipperary":  (52.4730, -8.1619),
-    "Kilkenny":   (52.6541, -7.2448),
-    "Louth":      (53.9270, -6.4866),
-    "Donegal":    (54.6540, -8.1096),
-    "Mayo":       (53.8650, -9.2977),
-    "Sligo":      (54.2766, -8.4761),
-    "Roscommon":  (53.6314, -8.1891),
-    "Cavan":      (53.9908, -7.3600),
-    "Monaghan":   (54.2492, -6.9683),
-    "Longford":   (53.7274, -7.7932),
-    "Westmeath":  (53.5345, -7.4653),
-    "Offaly":     (53.2357, -7.7122),
-    "Laois":      (52.9942, -7.3320),
-    "Carlow":     (52.8408, -6.9261),
-    "Leitrim":    (54.0051, -8.0038),
+    "Dublin":    (53.3498, -6.2603),
+    "Cork":      (51.8985, -8.4756),
+    "Galway":    (53.2707, -9.0568),
+    "Limerick":  (52.6638, -8.6267),
+    "Waterford": (52.2593, -7.1101),
+    "Kildare":   (53.1581, -6.9094),
+    "Meath":     (53.6055, -6.6564),
+    "Wicklow":   (52.9808, -6.3782),
+    "Wexford":   (52.3369, -6.4633),
+    "Kerry":     (52.1545, -9.5669),
+    "Clare":     (52.9045, -8.9812),
+    "Tipperary": (52.4730, -8.1619),
+    "Kilkenny":  (52.6541, -7.2448),
+    "Louth":     (53.9270, -6.4866),
+    "Donegal":   (54.6540, -8.1096),
+    "Mayo":      (53.8650, -9.2977),
+    "Sligo":     (54.2766, -8.4761),
+    "Roscommon": (53.6314, -8.1891),
+    "Cavan":     (53.9908, -7.3600),
+    "Monaghan":  (54.2492, -6.9683),
+    "Longford":  (53.7274, -7.7932),
+    "Westmeath": (53.5345, -7.4653),
+    "Offaly":    (53.2357, -7.7122),
+    "Laois":     (52.9942, -7.3320),
+    "Carlow":    (52.8408, -6.9261),
+    "Leitrim":   (54.0051, -8.0038),
 }
 
 
-def geocode_eircode(eircode: str) -> tuple[float, float] | None:
-    """
-    Use postcodes.io (free, no key, covers Irish Eircodes).
-    Returns (lat, lng) or None.
-    """
-    code = eircode.replace(" ", "").upper()
-    if len(code) < 7 or code in ("NAN", ""):
-        return None
-    try:
-        r = requests.get(
-            f"https://api.postcodes.io/postcodes/{code}",
-            timeout=5
-        )
-        if r.status_code == 200:
-            data = r.json().get("result", {})
-            lat = data.get("latitude")
-            lng = data.get("longitude")
-            if lat and lng:
-                return (float(lat), float(lng))
-    except Exception:
-        pass
-    return None
+def load_cache() -> dict:
+    if CACHE_F.exists():
+        with open(CACHE_F) as f:
+            return json.load(f)
+    return {}
 
 
-def geocode_nominatim(address: str, county: str) -> tuple[float, float] | None:
-    """
-    Nominatim (OSM) geocoder — rate limited 1 req/s.
-    Appends ', Ireland' to improve match accuracy.
-    """
-    query = f"{address}, {county}, Ireland"
+def save_cache(cache: dict):
+    with open(CACHE_F, "w") as f:
+        json.dump(cache, f)
+
+
+def nominatim(address: str, county: str, cache: dict) -> tuple[float, float] | None:
+    """Geocode via Nominatim OSM. Returns (lat, lng) or None."""
+    # Clean address — remove apartment numbers, shorten to key parts
+    parts = [p.strip() for p in address.split(",")]
+    # Use last 2-3 meaningful parts + county + Ireland
+    query_parts = parts[-2:] if len(parts) >= 2 else parts
+    query = ", ".join(query_parts) + f", {county}, Ireland"
+
+    if query in cache:
+        return cache[query]
+
     try:
         r = requests.get(
             "https://nominatim.openstreetmap.org/search",
             params={"q": query, "format": "json", "limit": 1, "countrycodes": "ie"},
-            headers={"User-Agent": "IrelandWealthMap/1.0 (research project)"},
+            headers=HEADERS,
             timeout=10,
         )
         results = r.json()
         if results:
-            return (float(results[0]["lat"]), float(results[0]["lon"]))
+            lat = float(results[0]["lat"])
+            lng = float(results[0]["lon"])
+            result = (lat, lng)
+        else:
+            result = None
     except Exception:
-        pass
-    return None
+        result = None
+
+    cache[query] = result
+    return result
 
 
-def run():
+def county_centroid(county: str) -> tuple[float, float]:
+    """Return county centroid with small random jitter so points don't stack."""
+    base = COUNTY_CENTROIDS.get(county, (53.4, -8.0))
+    return (
+        base[0] + np.random.uniform(-0.12, 0.12),
+        base[1] + np.random.uniform(-0.15, 0.15),
+    )
+
+
+def run(geocode_all: bool = False, limit: int | None = None):
+    rng = np.random.default_rng(42)
+    np.random.seed(42)
+
     df = pd.read_parquet(IN)
     print(f"Loaded {len(df):,} rows")
 
-    df["lat"] = np.nan
-    df["lng"] = np.nan
+    # ── Check for existing partial output ─────────────────────────────────────
+    if OUT.exists():
+        existing = pd.read_parquet(OUT)
+        done_ids = set(existing.index)
+        print(f"  Resuming — {len(done_ids):,} already geocoded")
+        df = df[~df.index.isin(done_ids)]
+        print(f"  Remaining: {len(df):,} rows")
+    else:
+        existing = None
+
+    df["lat"]        = np.nan
+    df["lng"]        = np.nan
     df["geo_source"] = "none"
 
-    # ── Pass 1: Eircode ───────────────────────────────────────────────────────
-    print("\nPass 1: Eircode lookup …")
-    eircode_cache: dict[str, tuple | None] = {}
-    eircode_mask = df["eircode"].notna() & (df["eircode"] != "NAN") & (df["eircode"].str.len() >= 7)
+    # ── Decide which rows to geocode via Nominatim ────────────────────────────
+    if geocode_all:
+        to_geocode = df.index.tolist()
+        print(f"\nGeocoding ALL {len(to_geocode):,} rows via Nominatim")
+        print("Warning: this will take many days at 1 req/s")
+    else:
+        # Only luxury sales (>=€1m) — the most valuable data
+        luxury_mask = df["is_luxury"] == True
+        to_geocode  = df[luxury_mask].index.tolist()
+        print(f"\nGeocoding {len(to_geocode):,} luxury sales (>=€1m) via Nominatim")
+        print(f"Estimated time: {len(to_geocode)/3600:.1f} hours at 1 req/s")
 
-    for idx in tqdm(df[eircode_mask].index, desc="  Eircode"):
-        ec = df.at[idx, "eircode"]
-        if ec not in eircode_cache:
-            eircode_cache[ec] = geocode_eircode(ec)
-            time.sleep(0.05)   # postcodes.io is generous but be polite
-        result = eircode_cache[ec]
-        if result:
-            df.at[idx, "lat"]        = result[0]
-            df.at[idx, "lng"]        = result[1]
-            df.at[idx, "geo_source"] = "eircode"
+    if limit:
+        to_geocode = to_geocode[:limit]
+        print(f"  (limited to {limit} for testing)")
 
-    matched_1 = (df["geo_source"] == "eircode").sum()
-    print(f"  ✓ Eircode matched: {matched_1:,} / {eircode_mask.sum():,}")
+    # ── Nominatim geocoding ────────────────────────────────────────────────────
+    cache = load_cache()
+    matched = 0
 
-    # ── Pass 2: Nominatim for remainder (sample to avoid hammering OSM) ───────
-    unmatched = df[df["lat"].isna()].copy()
-    print(f"\nPass 2: Nominatim for {len(unmatched):,} unmatched …")
-    print("  (capped at 500 Nominatim calls — county centroid for the rest)")
-
-    nominatim_cap = 500
-    count = 0
-    for idx in tqdm(unmatched.index, desc="  Nominatim"):
-        if count >= nominatim_cap:
-            break
-        result = geocode_nominatim(df.at[idx, "address"], df.at[idx, "county"])
+    for i, idx in enumerate(tqdm(to_geocode, desc="Nominatim")):
+        result = nominatim(df.at[idx, "address"], df.at[idx, "county"], cache)
         if result:
             df.at[idx, "lat"]        = result[0]
             df.at[idx, "lng"]        = result[1]
             df.at[idx, "geo_source"] = "nominatim"
-        count += 1
-        time.sleep(1.1)   # OSM requires ≥1 s between requests
+            matched += 1
+        time.sleep(1.1)  # Nominatim requires >= 1s between requests
 
-    matched_2 = (df["geo_source"] == "nominatim").sum()
-    print(f"  ✓ Nominatim matched: {matched_2:,}")
+        # Save cache + partial output every 500 records
+        if (i + 1) % 500 == 0:
+            save_cache(cache)
+            _save_partial(df, existing)
+            print(f"  [{i+1}/{len(to_geocode)}] matched so far: {matched:,}")
 
-    # ── Pass 3: County centroid fallback ─────────────────────────────────────
+    save_cache(cache)
+    print(f"\nNominatim matched: {matched:,} / {len(to_geocode):,}")
+
+    # ── County centroid fallback for everything else ───────────────────────────
     still_missing = df["lat"].isna()
-    print(f"\nPass 3: County centroid fallback for {still_missing.sum():,} rows …")
+    print(f"Applying county centroid to {still_missing.sum():,} remaining rows ...")
     for idx in df[still_missing].index:
-        county = df.at[idx, "county"]
-        centroid = COUNTY_CENTROIDS.get(county)
-        if centroid:
-            # Add small jitter so points don't all stack on the same spot
-            df.at[idx, "lat"]        = centroid[0] + np.random.uniform(-0.05, 0.05)
-            df.at[idx, "lng"]        = centroid[1] + np.random.uniform(-0.05, 0.05)
-            df.at[idx, "geo_source"] = "county_centroid"
+        lat, lng = county_centroid(df.at[idx, "county"])
+        df.at[idx, "lat"]        = lat
+        df.at[idx, "lng"]        = lng
+        df.at[idx, "geo_source"] = "county_centroid"
 
-    # ── Summary ───────────────────────────────────────────────────────────────
-    print("\n── Geocoding summary ──")
-    print(df["geo_source"].value_counts().to_string())
-    still_none = df["lat"].isna().sum()
-    if still_none:
-        print(f"  Still unmatched: {still_none:,} (dropping)")
-        df = df[df["lat"].notna()]
+    # ── Combine with any previous partial output ──────────────────────────────
+    final = _save_partial(df, existing, final=True)
 
-    df.to_parquet(OUT, index=False)
-    print(f"\n✅  Saved → {OUT}  ({len(df):,} rows with coordinates)")
+    print(f"\n── Geocoding summary ──")
+    print(final["geo_source"].value_counts().to_string())
+    print(f"\n✅  Saved → {OUT}  ({len(final):,} total rows)")
+
+
+def _save_partial(df: pd.DataFrame, existing, final: bool = False) -> pd.DataFrame:
+    """Merge current batch with any previously saved output and save."""
+    if existing is not None:
+        combined = pd.concat([existing, df], ignore_index=False)
+    else:
+        combined = df
+    combined.to_parquet(OUT, index=True)
+    return combined
 
 
 if __name__ == "__main__":
-    run()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--all",   action="store_true", help="Geocode all rows (very slow)")
+    parser.add_argument("--limit", type=int, default=None, help="Limit Nominatim calls for testing")
+    args = parser.parse_args()
+    run(geocode_all=args.all, limit=args.limit)
