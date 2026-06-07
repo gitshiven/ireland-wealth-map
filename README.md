@@ -1,132 +1,91 @@
-# 🗺 Ireland Wealth Map
+# Ireland Wealth Map
 
-> *Where money lives in Ireland — and where it's moving.*
+**Live site: [ireland-wealth-map.vercel.app](https://ireland-wealth-map.vercel.app)**
 
-A full-stack data project mapping property wealth concentration across all 26 Irish counties and 160+ Eircode districts. Built on the Residential Property Price Register (600k+ transactions since 2010), enriched with live Daft.ie listings and CRO/RBO corporate ownership intelligence.
+A full-stack data engineering and visualisation project analysing property wealth concentration across all 26 Irish counties using the national Property Price Register.
 
-**Live demo:** [ireland-wealth-map.vercel.app](https://ireland-wealth-map.vercel.app)
-
----
-
-## Two Views
-
-### View I — Emerging vs Established Wealth
-Which areas are becoming wealthy fastest, and where is new money displacing old? Eircode-district level granularity with a Surprise Score (CAGR × inverse baseline price) that surfaces genuinely non-obvious findings.
-
-### View II — Who Really Owns Ireland
-Nationality of beneficial owners behind corporate property purchases ≥€500k. CRO company lookup + RBO Playwright scraper. The data no one has visualised cleanly.
+![Ireland Wealth Map Dashboard](dashboard-screenshot.png)
 
 ---
+
+## What it does
+
+786,907 residential property transactions from 2010 to 2024 processed through a custom Python pipeline to produce a composite Affluence Index for every Irish county and 827 Eircode districts. The dashboard lets you explore where money lives in Ireland — which counties are growing fastest, where inequality is highest, and which districts are emerging from a low baseline.
+
+## Key findings
+
+- Dublin ranks #1 with an Affluence Index of 72.2 (Tier 1 Elite), median sale price €360k
+- Sligo is the fastest growing county at 11.6% CAGR over 5 years — faster than Dublin
+- 15,588 properties sold above €1 million since 2010
+- One Wicklow Eircode district (A65) recorded 30.3% annual price growth
+- Wealth inequality (Gini coefficient) is highest in Kerry and Cork, not Dublin
 
 ## Stack
 
-| Layer | Tech |
-|-------|------|
-| Data pipeline | Python — pandas, geopandas, scikit-learn, Playwright |
-| Live enrichment | Apify — haketa/daft-scraper |
-| Geocoding | postcodes.io (Eircode) + Nominatim (OSM) |
-| Deprivation index | Pobal HP Index 2022 |
-| Corporate ownership | CRO API + RBO Playwright scraper |
-| Dashboard | Next.js 14, TypeScript, Tailwind CSS, Recharts |
-| Deploy | Vercel |
+**Pipeline**
+- Python, pandas, geopandas
+- Nominatim OSM geocoding (11,124 luxury sales geocoded precisely)
+- Snap-to-coast algorithm correcting 8,866 coastal geocoding errors
+- Composite Affluence Index: median price (30%) + CAGR (25%) + luxury share (20%) + Gini (10%) + district score (15%)
 
----
+**Dashboard**
+- Next.js 14, TypeScript, Tailwind CSS
+- Recharts for all data visualisations
+- Real Ireland relief map with geographic county pins
+- 50,000 point property heatmap colour-coded by price band
+- Animated landing page (count-up sequence)
+- Deployed on Vercel
 
-## Data Sources
+**Data sources**
+- Property Price Register (propertypriceregister.ie) — all residential sales since 2010
+- Pobal HP Deprivation Index 2022
+- Companies Registration Office (CRO)
+- Register of Beneficial Owners (RBO)
 
-| Source | What | Cost |
-|--------|------|------|
-| [Property Price Register](https://propertypriceregister.ie) | All Irish residential sales 2010–present | Free |
-| [Daft.ie](https://daft.ie) via Apify | Live asking prices, BER, geo | ~$1/1000 listings |
-| [postcodes.io](https://postcodes.io) | Eircode → lat/lng | Free |
-| [Nominatim OSM](https://nominatim.openstreetmap.org) | Address geocoding | Free |
-| [Pobal HP Index](https://pobal.ie) | Deprivation scores by electoral division | Free |
-| [CRO](https://cro.ie) | Company registration lookup | Free |
-| [RBO](https://rbo.gov.ie) | Beneficial owner nationality (public) | Free |
-
----
-
-## Affluence Index Formula
-
-Weighted composite — all components normalised to 0–100:
-
-| Component | Weight |
-|-----------|--------|
-| Median sale price | 30% |
-| 5-year price CAGR | 25% |
-| Luxury sale share (≥€1m) | 20% |
-| Daft median asking price | 15% |
-| BER quality (% A/B rated) | 10% |
-
----
-
-## Setup
-
-```bash
-# 1. Clone
-git clone https://github.com/gitshiven/ireland-wealth-map
-cd ireland-wealth-map
-
-# 2. Python deps
-pip install pandas pyarrow geopandas numpy requests geopy scikit-learn openpyxl tqdm shapely playwright
-playwright install chromium
-
-# 3. Get data
-wget -O data/raw/PPR-ALL.csv "https://www.propertypriceregister.ie/..."
-wget -O data/raw/pobal_deprivation_2022.csv "https://www.pobal.ie/..."
-
-# 4. Set Apify token
-export APIFY_TOKEN=apify_api_xxxx
-
-# 5. Run pipeline (fast mode — skips overnight geocoding)
-python run_pipeline.py --fast
-
-# 6. Start dashboard
-cd dashboard
-npm install
-npm run dev
-# → http://localhost:3000
-```
-
----
-
-## Project Structure
+## Project structure
 
 ```
 ireland-wealth-map/
 ├── pipeline/
-│   ├── 01_clean_ppr.py          # Clean 600k PPR rows
-│   ├── 02_geocode.py            # Eircode + Nominatim geocoding (overnight)
-│   ├── 03_fetch_daft.py         # Apify → Daft.ie live listings
-│   ├── 04_affluence_index.py    # Composite Affluence Index + Gini
-│   ├── 05_export.py             # JSON + Excel exports
-│   ├── 06_eircode_districts.py  # District granularity + Surprise Score
-│   ├── 07_cro_rbo_scraper.py    # CRO corporate buyer lookup
-│   └── 07b_rbo_playwright.py    # RBO nationality scraper
+│   ├── 01_clean_ppr.py          # Clean and parse 786k PPR records
+│   ├── 02_geocode.py            # Nominatim geocoding + county centroid fallback
+│   ├── 04_affluence_index.py    # Build composite Affluence Index
+│   ├── 05_export.py             # Export JSON for dashboard + snap-to-coast fix
+│   └── 06_eircode_districts.py  # District-level surprise score analysis
 ├── dashboard/
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── page.tsx         # Main page + view switcher
-│   │   │   ├── layout.tsx       # Root layout + metadata
-│   │   │   └── globals.css      # Design tokens + Playfair Display
-│   │   ├── components/
-│   │   │   ├── EmergingView.tsx # View I — Emerging vs Established
-│   │   │   └── CorporateView.tsx# View II — Who Owns Ireland
-│   │   ├── hooks/
-│   │   │   └── useData.ts       # Data fetching hooks
-│   │   └── types/
-│   │       └── index.ts         # TypeScript interfaces
-│   └── public/data/             # Pipeline JSON outputs (auto-copied)
-├── output/                      # Pipeline outputs
-│   ├── county_summary.json
-│   ├── district_data.json
-│   ├── emerging_areas.json
-│   ├── heatmap_points.json
-│   ├── price_trends.json
-│   └── top_streets.json
-└── run_pipeline.py              # Master pipeline runner
+│   ├── src/app/
+│   │   ├── page.tsx             # Animated landing page
+│   │   └── dashboard/page.tsx   # Full analytics dashboard
+│   └── public/data/             # Pipeline output JSONs
+└── data/
+    └── processed/               # Intermediate parquet files
 ```
+
+## Running locally
+
+**Pipeline** (requires Python 3.11+)
+```bash
+pip install pandas geopandas pyarrow requests tqdm openpyxl
+python pipeline/01_clean_ppr.py
+python pipeline/02_geocode.py       # ~4.5 hours for luxury sales
+python pipeline/04_affluence_index.py
+python pipeline/05_export.py
+cp output/*.json dashboard/public/data/
+```
+
+**Dashboard**
+```bash
+cd dashboard
+npm install
+npm run dev
+```
+
+## Data notes
+
+The PPR-ALL.csv (~102MB) is excluded from the repository due to GitHub file size limits. Download it from [propertypriceregister.ie](https://www.propertypriceregister.ie) and place it at `data/raw/PPR-ALL.csv`.
+
+Geocoding uses Nominatim OSM at 1 request/second (free, no API key required). Luxury sales (≥€1M) are geocoded precisely. All other transactions use county centroids with random jitter.
 
 ---
 
-Built by Shiven — Dublin, Ireland
+Built by Shiven Singh — Dublin, 2024
